@@ -1,0 +1,103 @@
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.change {
+  background-color: grey;
+}
+
+#screen {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#slide1 {
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding-left: 18%;
+  padding-top: 10%;
+}
+
+#slide2 {
+  height: 100%;
+  width: 100%;
+  float: left;
+  margin-left: 50%;
+}
+
+#content {
+  width: 200%;
+  margin-left: 0;
+  padding-left : 0;
+}
+
+.body-slide {
+  background-color: #131E2B;
+}
+
+#input {
+  margin-left: 4.5%;
+  text-align: center;
+}
+
+#button {
+  margin-top: 3%;
+  margin-left: 6.2%;
+}
+
+h1 {
+  color: white;
+  text-shadow : 0 0 7px black;
+  margin-left: 0.5%;
+}
+
+h6 {
+  color: white;
+  text-shadow : 0 0 3px black;
+}
+
+#lettres {
+  margin-left: 5%;
+  margin-top: -3%;
+  color: white;
+}
+
+#buttonReturn {
+  margin-top: -5%; 
+}

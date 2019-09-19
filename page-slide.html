@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Slide page</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css-offres.css">
+
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet">
+  </head>
+
+  <body class="body-slide">
+    <div>
+      
+    </div>
+
+    <div id="screen">
+      <div id="content">
+        <div id="slide1">
+          <h1>Ajoutez votre question</h1>
+      <h6>(Votre question doit contenir un minimum de 12 caractères)</h4>
+      <p>
+        <input type="text" id="input" placeholder="Entrez une question" onkeyup="keyPress()"> 
+      </p>
+      <p>
+      <button onclick="isValid()" id="button">Confirmer</button>
+      </p>
+      <p id="lettres">Nombre de lettres: <span id="demo"></span></p>
+        </div>
+        <div id="slide2">
+          <button onclick="Return()" id="buttonReturn">Retournez sur la page</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      function keyPress(){
+        var input = document.getElementById("input");
+      var output = document.getElementById("demo");
+      var valueOfInput = input.value;
+      var lengthOfInput = input.value.length;
+      if (lengthOfInput < 12) {
+          lettres.style.color = "red";
+
+        }
+        else{
+          lettres.style.color = "white";
+        }
+
+      
+      output.innerHTML = lengthOfInput + '/120';
+      }
+
+      
+      
+      function isValid(){
+        var slide1 = document.getElementById("slide1");
+        var slide2 = document.getElementById("slide2");  
+        var slideGeneral = document.getElementById("content");
+        var lettres = document.getElementById("lettres");
+        var question = document.getElementById('input').value;
+        if (question.length < 12) {
+          alert("votre phrase n'est pas assez longue car elle comporte moins de 12 caractères");
+
+        }
+        else{
+          slideGeneral.style.marginLeft = "-100%";
+          slideGeneral.style.transition = "1s ease";
+        }
+      }
+
+      function Return(){
+          var slide1 = document.getElementById("slide1");
+          var slide2 = document.getElementById("slide2");  
+          var slideGeneral = document.getElementById("content");
+          var question = document.getElementById('input').value;
+          slideGeneral.style.marginLeft = "0%";
+          slideGeneral.style.transition = "1s ease";
+      }
+
+
+      input.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>
+    
+
+
+
+
+
+
+
+
+  </body>
+</html>
